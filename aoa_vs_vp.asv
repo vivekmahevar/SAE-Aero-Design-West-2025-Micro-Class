@@ -1,0 +1,20 @@
+clc 
+clear all
+
+
+filePath_AOA = "C:\Users\mahev\Desktop\1.Design and Program Files\Matlab\SAE\Graph_plottings\AOA vs NP and Sm.xlsx" ;
+
+data_AOA = readtable(filePath_AOA); 
+
+x1 = data_AOA{:,1}; 
+y1 = data_AOA{3}; 
+y2 = data_AOA{5,:}; 
+
+
+hold on ;
+
+plot(x1, y1,'b','Linewidth',1.5);
+plot(x1, y2,'r','Linewidth',1.5);
+xlabel('Time(sec)'); 
+ylabel('Mass flow rate(lbs)'); 
+title('Mass flow rate vs Time');
